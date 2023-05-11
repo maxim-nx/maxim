@@ -1,0 +1,38 @@
+html{
+
+    background-color: #191919;
+    background-image: repeating-linear-gradient(
+		45deg,
+		rgb(113, 41, 41, 0.3),
+		rgb(113, 41, 41, 0.3) 2em,
+		#0000 2em,
+		#0000 4em
+	);
+  /* , repeating-linear-gradient(
+		135deg,
+		rgba(41, 99, 113, 0.1),
+		rgb(41, 99, 113, 0.1) 2em,
+		#0000 2em,
+		#0000 4em
+    ); */
+    height: 100%;
+    color: #ecdbc1;
+    font-size: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    overflow: hidden;
+}
+
+#canvas-container{
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    border: solid hsl(0, 47%, 25%, 70%) 10px;
+    padding: 0;
+    margin: 0;
+}
