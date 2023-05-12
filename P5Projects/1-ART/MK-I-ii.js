@@ -1,5 +1,5 @@
-const w = 800;
-const h = 800;
+const w = 700;
+const h = 700;
 let pieceSet = [];
 let useMouse = true;
 const speedRange = [4, 12];
