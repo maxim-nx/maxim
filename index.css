@@ -27,7 +27,7 @@ html{
     overflow: hidden;
 }
 
-#canvas-container{
+canvas{
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
