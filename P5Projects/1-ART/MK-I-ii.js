@@ -5,9 +5,11 @@ let useMouse = true;
 const speedRange = [3, 14];
 let idlePos;
 let idleNoise = 0;
+const canvasWindowRatio = 0.9;
 
 function setup() {
-	let window = createCanvas(w, h);
+	let canvasSize = getCanvasSize(canvasWindowRatio);
+	let window = createCanvas(canvasSize.w, canvasSize.h);
 	window.parent("canvas-container");
 	background(0);
 	idlePos = createVector(0, 0);
@@ -23,6 +25,28 @@ function setup() {
 		piece.prepAngles(); // Don't forget to call prepAngles
 		pieceSet.push(piece);
 	}
+}
+
+function getCanvasSize(r) {
+	if (windowWidth > windowHeight) {
+		// Landscape
+		return {
+			w: r * windowHeight,
+			h: r * windowHeight,
+		};
+	} else {
+		// Portrait
+		return {
+			w: r * windowWidth,
+			h: r * windowWidth,
+		};
+	}
+}
+
+function windowResized() {
+	let canvasSize = getCanvasSize(canvasWindowRatio);
+	resizeCanvas(canvasSize.w, canvasSize.h);
+	background(0);
 }
 
 function draw() {
