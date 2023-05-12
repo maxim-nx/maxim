@@ -84,6 +84,7 @@ class Piece {
 		} else {
 			this.framesToUpd8 = floor(d3 / (sin(newAngle) * this.vel.mag()));
 		}
+		this.framesToUpd8 %= 60;
 	}
 
 	setCourse(destX, destY) {
