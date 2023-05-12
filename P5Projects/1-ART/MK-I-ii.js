@@ -12,7 +12,7 @@ function setup() {
 	background(0);
     idlePos = createVector(0,0);
 
-	for (let i = 0; i < 3000; i++) {
+	for (let i = 0; i < 2000; i++) {
 		let piece = new Piece(random(width), random(height), random(speedRange[0], speedRange[1]), speedRange, random(2, 12));
         piece.prepAngles(); // Don't forget to call prepAngles
         pieceSet.push(piece);
