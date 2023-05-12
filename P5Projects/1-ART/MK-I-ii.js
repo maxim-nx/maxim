@@ -30,15 +30,17 @@ function setup() {
 function getCanvasSize(r) {
 	if (windowWidth > windowHeight) {
 		// Landscape
+		const size = min(1000, r * windowHeight);
 		return {
-			w: r * windowHeight,
-			h: r * windowHeight,
+			w: size,
+			h: size,
 		};
 	} else {
 		// Portrait
+		const size = min(1000, r * windowWidth);
 		return {
-			w: r * windowWidth,
-			h: r * windowWidth,
+			w: size,
+			h: size,
 		};
 	}
 }
