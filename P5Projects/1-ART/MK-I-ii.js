@@ -21,7 +21,7 @@ function setup() {
 
 function draw() {
     background(0, 10);
-    blendMode(BLEND);
+    // blendMode(BLEND);
     // clear();
 	if(mouseX > 0 && mouseX < height && mouseY > 0 && mouseY < height){
 		useMouse = true;
