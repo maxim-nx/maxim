@@ -31,7 +31,7 @@ function draw() {
 
     idlePos.x = width*noise(idleNoise);
     idlePos.y = width*noise(idleNoise, 100);
-    idleNoise+= 0.03;
+    idleNoise+= random(-0.02, 0.03);
 
 	for (let piece of pieceSet) {
 		piece.rev();
